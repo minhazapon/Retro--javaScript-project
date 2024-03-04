@@ -29,11 +29,11 @@
 
        const apiCard = document.createElement('div')
       
-       apiCard.classList = `flex gap-3 bg-blue-200 w-[700px] p-4 rounded-xl border-[1px] border-blue-800 mt-4`
+       apiCard.classList = `flex gap-3 bg-blue-200 w-[700px] p-4 rounded-xl border-[1px] border-blue-800 mt-4 `
 
        apiCard.innerHTML = `
        
-       <div><img class="h-[100px] w-[100px]" src="${apiData.image
+       <div><img class="h-[100px] w-[100px] " src="${apiData.image
        }" alt=""></div>
 
        <div>
