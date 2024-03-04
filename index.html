@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+
+</head>
+<body>
+    
+   <header class="mt-10 ml-5 mr-5">
+             
+         <div class="flex justify-between flex-col md:flex-row lg:flex-row">
+
+         <div>
+             <h1 class="text-4xl font-bold text-blue-950">Retro</h1>
+
+         </div>
+
+
+         <div class="flex gap-2 ">
+
+           <div class="tooltip" data-tip="home">
+            <button class="btn rounded-full">  <img class="h-[30px] w-[30px]  "  src="images/home.png" alt=""></button>
+          </div>
+           
+          <div class="tooltip" data-tip="Edit">
+            <button class="btn rounded-full">   <img class="h-[30px] w-[30px] "  src="images/pencil.png" alt=""></button>
+          </div>
+          
+
+          <div class="tooltip" data-tip="add-user">
+            <button class="btn rounded-full">   <img class="h-[30px] w-[30px] "  src="images/add-user.png" alt=""></button>
+          </div>
+
+
+          <div class="tooltip" data-tip="Flag">
+            <button class="btn rounded-full">  <img class="h-[30px] w-[30px] "  src="images/red-flag.png" alt=""></button>
+          </div>
+          <button onclick="search()" class="btn  bg-blue-500 text-white">Sign Up</button>
+        
+         </div>
+
+        </div>
+
+<!-- 
+        banner section -->
+
+        <div class="flex-col md:flex-row lg:flex-row  mt-10 flex gap-80 justify-center items-center bg-blue-950 rounded-xl h-[750px] w-full bg-no-repeat bg-cover bg-center" style="background-image: url(images/bgbanner.png);"  >
+
+          <div class="text-white flex-col md:flex-row lg:flex-row">
+            <h1 class="text-4xl font-bold">Welcome To The<br> <span class="text-blue-800">ReTro</span> Forum</h1>
+
+            <p class="font-bold mt-2">Share Your favorite opinion<br> and win and wp Forum coffee mug</p>
+             
+            <div class="text-black flex items-center gap-1 mt-4 flex-col md:flex-row lg:flex-row">
+            <input id="searchfield" class=" border-blue-400 border-[1px] h-[45px] p-1 rounded-xl" type="text" placeholder="Search Here anything">
+            
+            <button onclick="search()" class="btn bg-blue-400">search</button>
+            </div>
+          
+          </div>
+
+          
+          <div class="text-xl font-bold bg-white p-4 text-black rounded-xl flex-col md:flex-row lg:flex-row">
+
+            <h1>Registered Users    01</h1>
+            <h1>Forum     05</h1>
+            <h1>Topics     01</h1>
+            <h1>replies 01</h1>
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+
+   </header>
+
+
+   <main class="mt-16 ml-5 mr-5">
+    
+     <!-- lets discuss section -->
+
+
+
+
+      <div class="text-center">
+            <h1 class="text-4xl font-bold">Let’s Discuss</h1>
+           <p class="text-xl text-slate-500 mt-4">Yes, you can run unit tests and view the results directly within the app.<br> The integrated testing features allow for a streamlined .</p>
+
+
+      </div>
+
+       <section class="mt-5">
+
+          <div id="spinner" class="text-center my-36 hidden">
+
+            <span class="loading loading-spinner text-secondary text-5xl"></span>
+
+          </div>
+
+
+         <div class="flex gap-28 justify-center ">
+
+
+         <div>
+
+         <div id="apiContainer" class="">
+        
+         
+        </div>
+
+         </div>
+
+
+      
+
+         <div class="bg-slate-300 w-[300px] h-[100px] p-1 rounded-xl flex items-center justify-center">
+
+              <h1 class="flex gap-28 text-xl font-bold">Title <span>Mark as read</span></h1>
+
+         </div>
+
+ 
+ 
+
+       </section>
+
+
+      <!-- join -->
+      
+      
+      <section class="mt-16">
+           
+          <div class="flex gap-44 justify-center items-center bg-blue-950 p-20 rounded-xl flex-col md:flex-row lg:flex-row">
+           
+          <div class="text-white">
+            <h1 class="text-4xl font-bold">Join Our Forum</h1>
+
+            <p class="mt-5 text-xl">Share your favorite opinion and win and wp forum coffee mug! Yes,<br> you can run unit tests and view the results directly within the app. </p>
+              
+            <button class="btn btn-secondary mt-5">Registered Now</button>
+
+          </div>
+
+
+          <div>
+
+           <img class="h-[300px]" src="images/joinforum.png" alt="">
+
+          </div>
+             
+          </div>
+        </section>
+
+    <!-- latest section -->
+        <section class="mt-16">
+
+           <div class="text-center">
+             <h1 class="text-4xl font-bold">Latest Posts</h1>
+
+             <p class="text-xl text-slate-500 mt-5">Yes, you can run unit tests and view the results directly within the app.<br> The integrated testing features allow for a streamlined .</p>
+
+           </div>
+
+
+
+           <div>
+
+            
+
+
+
+           </div>
+           
+
+           </div> 
+
+
+           
+
+           <div class="flex justify-center gap-10">
+
+
+
+            <div id="lastesContainer" class="grid md:grid-cols-3 gap-5" class="">
+              
+            </div>
+
+           </div>
+
+
+
+        </section>
+
+
+
+
+   </main>
+
+
+   <footer class="mt-14  bg-slate-300 p-28">
+
+      <div class="text-center">
+         <h1 class="text-4xl font-bold">Retro</h1>
+
+
+         <p class="text-xl mt-3">Sign up to our online community of practice forums<br> to connect with other practitioners.</p>
+
+
+      </div>
+
+        <div class="flex gap-5 justify-center items-center mt-8 ">
+
+          <img class="h-[50px] w-[50px]" src="images/facebook.png" alt="">
+          <img class="h-[50px] w-[50px]" src="images/github.png" alt="">
+          <img class="h-[50px] w-[50px]" src="images/instagram.png" alt="">
+          <img class="h-[50px] w-[50px]" src="images/twitter.png" alt="">
+
+        </div>
+
+   </footer>
+
+
+
+
+  <script src="retro.js"></script>
+
+  <script src="retro2.js"></script>
+
+</body>
+</html>
